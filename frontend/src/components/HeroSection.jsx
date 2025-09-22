@@ -16,7 +16,7 @@ const HeroSection = () => {
     </h1>
   
   </div>
-</section> *
+</section> 
 
 
     </>
