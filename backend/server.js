@@ -1,5 +1,5 @@
 
-import "dotenv/config";
+// import "dotenv/config";
 import express from "express";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js"
@@ -13,26 +13,13 @@ import path from "path"
 import mongoose from "mongoose";
 import { fileURLToPath } from "url";
 
-import { config } from 'dotenv';
+
 import { dirname, resolve } from 'path';
 
 ;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// Load .env from project root
-config({ path: resolve(__dirname, '../../.env') });
-
-
-// Load .env from the root directory
-dotenv.config({ path: path.resolve(process.cwd(), '.env') });
-
-console.log('Current directory:', process.cwd());
-console.log('Environment variables loaded:', process.env.NODE_ENV);
-
-
-
 
 
 // Connect to DB
