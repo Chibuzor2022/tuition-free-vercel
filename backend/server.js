@@ -14,7 +14,6 @@ import mongoose from "mongoose";
 import { fileURLToPath } from "url";
 
 import { config } from 'dotenv';
-import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 
 ;
