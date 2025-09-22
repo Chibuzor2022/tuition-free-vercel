@@ -1,9 +1,5 @@
 
-if (process.env.NODE_ENV !== "production") {
-  import("dotenv/config");
-}
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 import express from "express";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js"
