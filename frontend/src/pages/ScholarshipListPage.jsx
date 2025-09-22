@@ -1,4 +1,4 @@
-// frontend/src/pages/ScholarshipListPage.jsx
+
 import { useState } from "react";
 import ScholarshipCard from "../components/ScholarshipCard";
 import Loader from "../components/Loader";
