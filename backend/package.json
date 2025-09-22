@@ -1,5 +1,7 @@
 {
+  "name": "backend",
+  "type": "module", 
   "dependencies": {
-    "dotenv": "^17.2.2"
+        "dotenv": "^17.2.2"
   }
 }
