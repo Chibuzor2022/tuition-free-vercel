@@ -39,9 +39,11 @@ const AdminScholarshipListpPage = () => {
     }
   }, [isError, error]);
 
-  // Handle create scholarship
+    // Handle create scholarship
   const handleCreate = async () => {
+    
     if (window.confirm('Are you sure you want to create a new scholarship?')) {
+      console.log('Sending data:') 
       try {
         const response = await createScholarship().unwrap();
         if (response && response._id) {

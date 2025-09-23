@@ -82,23 +82,52 @@ const deleteScholarship = asyncHandler(async (req, res) => {
 // @desc    Create a scholarship
 // @route   POST /api/scholarships
 // @access  Private/Admin
-const createScholarship = asyncHandler(async (req, res) => {
-	const scholarship = new Scholarship({
-  name: "Sample name",
-  description: "Sample desc",
-  country: "Sample country",
-  deadline: new Date("2025-12-31"),   // ✅ valid Date
-  funding: ["Sample benefit 1", "Sample benefit 2"], // ✅ array of strings
-  eligibility: "Sample eligibility",
-  level: "Sample level",
-  link: "https://example.com",
-  images: [],
-  user: req.user._id,
-});
+// const createScholarship = asyncHandler(async (req, res) => {
+// 	const scholarship = new Scholarship({
+//   name: "Sample name",
+//   description: "Sample desc",
+//   country: "Sample country",
+//   deadline: new Date("2025-12-31"),   // ✅ valid Date
+//   funding: ["Sample benefit 1", "Sample benefit 2"], // ✅ array of strings
+//   eligibility: "Sample eligibility",
+//   level: "Sample level",
+//   link: "https://example.com",
+//   images: [],
+//   user: req.user._id,
+// });
 
-	const createdScholarship = await scholarship.save();
-	res.status(201).json(createdScholarship);
-});
+// 	const createdScholarship = await scholarship.save();
+// 	res.status(201).json(createdScholarship);
+// });
+
+
+ const createScholarship = async (req, res) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: "Not authorized" });
+    }
+
+    const { name, description, country, deadline, eligibility, funding, level, link } = req.body;
+
+    const scholarship = new Scholarship({
+      name,
+      description,
+      country,
+      deadline,
+      eligibility,
+      funding,
+      level,
+      link,
+      createdBy: req.user._id, // safe now
+    });
+
+    const createdScholarship = await scholarship.save();
+    res.status(201).json(createdScholarship);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error creating scholarship" });
+  }
+};
 
 // @desc    Update a scholarship
 // @route   PUT /api/scholarships/:id

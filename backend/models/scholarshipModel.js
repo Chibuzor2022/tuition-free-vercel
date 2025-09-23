@@ -9,8 +9,8 @@ const scholarshipSchema = new mongoose.Schema({
   funding: { type: [String], required: true },
  level: { type: String, required: true },
   link: { type: String, required: true },
-  // image: { type: String, required: true }, // Cloudinary URL
   images: {  type: [String],  default: [],
+
 },
 });
 

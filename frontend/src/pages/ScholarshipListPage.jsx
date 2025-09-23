@@ -47,3 +47,40 @@ const ScholarshipListPage = () => {
 
 
 export default ScholarshipListPage;
+
+
+// import { useEffect, useState } from "react";
+// import api from "../api/axios";
+
+// const ScholarshipsPage = () => {
+//   const [scholarships, setScholarships] = useState([]);
+
+//   useEffect(() => {
+//     const fetchScholarships = async () => {
+//       try {
+//         const { data } = await api.get("/scholarships");
+//         setScholarships(data);
+//       } catch (error) {
+//         console.error("Error fetching scholarships:", error);
+//       }
+//     };
+
+//     fetchScholarships();
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Available Scholarships</h1>
+//       <ul>
+//         {scholarships.map((sch) => (
+//           <li key={sch._id}>
+//             <h3>{sch.name}</h3>
+//             <p>{sch.country}</p>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default ScholarshipsPage;

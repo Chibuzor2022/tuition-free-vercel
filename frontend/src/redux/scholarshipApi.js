@@ -40,7 +40,9 @@ export const scholarshipApi = apiSlice.injectEndpoints({
 
   
     // Create a new scholarship (Admin only)
+    
     createScholarship: builder.mutation({
+      
       query: (newScholarship) => ({
         url: "/scholarships",
         method: "POST",
@@ -49,6 +51,7 @@ export const scholarshipApi = apiSlice.injectEndpoints({
         credentials: "include",
       }),
       invalidatesTags: ["Scholarship"],
+      
     }),
 
       

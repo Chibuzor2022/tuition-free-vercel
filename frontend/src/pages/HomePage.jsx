@@ -6,6 +6,7 @@ import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import Pagination from "../components/Pagination";
 import HeroSection from "../components/HeroSection";
+// import api from "../api/axios";
 
 const Home = () => {
   const [scholarships, setScholarships] = useState([]);

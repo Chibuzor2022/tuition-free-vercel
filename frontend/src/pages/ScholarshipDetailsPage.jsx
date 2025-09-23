@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
-import axios from 'axios'; // Import axios for API requests
+// import axios from 'axios'; // Import axios for API requests
 import ReactMarkdown from "react-markdown";
+import api from '../api/axios';
 
 function ScholarshipDetails() {
   const { id } = useParams(); // Extract the scholarship ID from the route
@@ -17,7 +18,7 @@ function ScholarshipDetails() {
    
     const fetchScholarship = async () => {
   try {
-    const response = await axios.get(
+    const response = await api.get(
       `${import.meta.env.VITE_API_URL}/scholarships/${id}`,
       { withCredentials: true } // ✅ needed for cookies
     );

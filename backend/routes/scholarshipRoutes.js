@@ -1,3 +1,29 @@
+// import express from 'express';
+// import {
+//   getScholarships,
+//   getScholarshipById,
+//   createScholarship,
+//   updateScholarship,
+//   deleteScholarship
+// } from '../controllers/scholarshipController.js';
+// import { protect, admin } from '../middleware/authMiddleware.js';
+
+// const router = express.Router();
+
+// // Public routes
+// router.get('/', getScholarships);
+// router.get('/:id', getScholarshipById);
+
+// // Admin protected routes
+// router.post('/', protect, admin, createScholarship);
+// router.put('/:id', protect, admin, updateScholarship);
+// router.delete('/:id', protect, admin, deleteScholarship);
+
+// export default router;
+
+
+
+
 import express from "express";
 import {
   createScholarship,
