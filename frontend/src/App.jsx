@@ -3,10 +3,6 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import ScholarshipListPage from "./pages/ScholarshipListPage"; 
 import ScholarshipDetailsPage from "./pages/ScholarshipDetailsPage";
-import ScholarshipEditPage from "./pages/admin/ScholarshipEditPage";
-import AdminScholarshipListPage from "./pages/admin/AdminScholarshipListPage";
-import LoginPage from "./pages/LoginPage";
-import ProtectedRoute from "./components/ProtectedRoute"; // for admin protection
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import AboutPage from "./pages/AboutPage";
@@ -24,18 +20,12 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/scholarships" element={<ScholarshipListPage />} />
-          <Route path="/scholarship/:id" element={<ScholarshipDetailsPage />} />
-          <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactForm/>} />
-          <Route path="/scholarships/:id" element={<ScholarshipDetailsPage />} />
           <Route path="/search/:keyword" element={<HomePage/> } />
+        <Route path="/scholarships/:slug" element={<ScholarshipDetailsPage />} />
 
-          {/* Protected Admin Routes */}
-          <Route path="/admin/scholarships" element={<ProtectedRoute><AdminScholarshipListPage /></ProtectedRoute>} />
-          <Route path="/admin/scholarship/:id/edit" element={<ProtectedRoute><ScholarshipEditPage /></ProtectedRoute>} />
-
-          
+                  
         </Route>
       </Routes>
       </main>
