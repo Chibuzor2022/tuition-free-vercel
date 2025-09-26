@@ -7,9 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'Tuitio-free-Sanity',
 
-  projectId: 'mm12a4zr',
-  dataset: 'production',
-
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+   dataset: import.meta.env.VITE_SANITY_DATASET,
   plugins: [structureTool(), visionTool()],
 
   schema: {

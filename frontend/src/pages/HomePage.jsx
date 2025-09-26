@@ -113,7 +113,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-6 gap-3">
+      <div className="flex justify-center mt-6 gap-3 mb-5">
         {Array.from({ length: Math.ceil(filteredScholarships.length / scholarshipsPerPage) }).map(
           (_, idx) => (
             <button
