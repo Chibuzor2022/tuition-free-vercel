@@ -63,19 +63,19 @@ const HeroSection = ({ scholarships = [], setFiltered, setCurrentPage }) => {
 
   return (
     <section className="relative bg-indigo-600 text-white px-4 text-center py-16 lg:py-20 lg:min-h-screen flex items-center justify-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-6">
-          <span className="text-yellow-300 text-3xl sm:text-5xl lg:text-7xl font-bold">
+          <span className="text-yellow-300 text-3xl sm:text-5xl lg:text-6xl font-bold">
             Welcome to Tuition-free World
           </span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-extrabold mb-8 leading-tight">
           Find Your <span className="text-yellow-300">Dream Scholarship</span>
         </h1>
 
         <form
           onSubmit={handleSubmit}
-          className="mt-5 flex flex-col sm:flex-row justify-center gap-2 bg-white p-3 rounded-2xl max-w-2xl mx-auto"
+          className="mt-5 flex flex-col sm:flex-row justify-center gap-2 bg-white p-1 rounded-2xl max-w-xl mx-auto"
         >
           <select
             value={country}
