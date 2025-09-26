@@ -1,1 +1,1 @@
-This is a Scholarship Website built usng MERN stack
+This is a Scholarship Website built with React and Sanity.
