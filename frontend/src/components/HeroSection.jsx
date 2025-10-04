@@ -70,7 +70,7 @@ const HeroSection = ({ scholarships = [], setFiltered, setCurrentPage }) => {
           </span>
         </div>
         <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-5xl font-extrabold mb-8 leading-tight">
-          Find Your <span className="text-yellow-300">Dream Scholarship</span>
+          Find Your <span className="text-yellow-300">Dream University</span>
         </h1>
 
         <form
