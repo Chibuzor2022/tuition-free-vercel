@@ -43,10 +43,10 @@ const ScholarshipDetailsPage = () => {
       
       <p className="text-gray-700  mb-2"><span className="font-bold">Country:</span> {scholarship.country}</p>
       <p className="text-gray-700 mb-2">
-        Deadline: {new Date(scholarship.deadline).toDateString()}
+        <span className="font-bold">Deadline:</span> {new Date(scholarship.deadline).toDateString()}
       </p>
-      <p className="text-gray-700 mb-2">Level: {scholarship.level}</p>
-      <p className="text-gray-700 mb-2">Funding: {scholarship.funding?.join(", ")}</p>
+      <p className="text-gray-700 mb-2"><span className="font-bold">Level:</span> {scholarship.level}</p>
+      <p className="text-gray-700 mb-2"><span className="font-bold">Funding:</span> {scholarship.funding?.join(", ")}</p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">Eligibility</h2>
       <p className="text-gray-800">{scholarship.eligibility}</p>
