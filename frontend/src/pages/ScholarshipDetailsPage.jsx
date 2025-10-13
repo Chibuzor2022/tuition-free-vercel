@@ -41,7 +41,7 @@ const ScholarshipDetailsPage = () => {
       <div className="bg-white rounded-xl shadow-md p-4 max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{scholarship.name}</h1>
       
-      <p className="text-gray-700 mb-2">Country: {scholarship.country}</p>
+      <p className="text-gray-700  mb-2"><span className="font-bold">Country:</span> {scholarship.country}</p>
       <p className="text-gray-700 mb-2">
         Deadline: {new Date(scholarship.deadline).toDateString()}
       </p>
