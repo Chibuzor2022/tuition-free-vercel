@@ -15,19 +15,33 @@ const ScholarshipDetailsPage = () => {
     if (!slug) return;
 
     client
+      // .fetch(
+      //   `*[_type == "scholarship" && slug.current == $slug][0]{
+      //     name,
+      //     description,
+      //     country,
+      //     deadline,
+      //     eligibility,
+      //     funding,
+      //     level,
+      //     link
+      //   }`,
+      //   { slug }
+      // )
       .fetch(
-        `*[_type == "scholarship" && slug.current == $slug][0]{
-          name,
-          description,
-          country,
-          deadline,
-          eligibility,
-          funding,
-          level,
-          link
-        }`,
-        { slug }
-      )
+    `*[_type == "scholarship" && slug.current == $slug][0]{
+      name,
+      description,
+      country,
+      deadline,
+      eligibility,
+      funding,
+      level,
+      link,
+      datePosted
+    }`,
+    { slug }
+  )
       .then((data) => setScholarship(data))
       .catch((err) => console.error("Sanity fetch error:", err));
   }, [slug]);
@@ -39,12 +53,30 @@ const ScholarshipDetailsPage = () => {
   return (
     // <div className="p-6 max-w-3xl mx-auto">
       <div className="bg-white rounded-xl shadow-md p-4 max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{scholarship.name}</h1>
+      {/* <h1 className="text-3xl font-bold mb-4">{scholarship.name}</h1> */}
+      <h1 className="mb-4 text-3xl w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 rounded-lg hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition shadow-md disabled:opacity-50" >{scholarship.name}</h1>
       
+<p className="text-gray-700 mb-2">
+  <span className="font-bold">Date Posted:</span>{" "}
+  {scholarship.datePosted
+    ? new Date(scholarship.datePosted).toDateString()
+    : "N/A"}
+</p>
+
       <p className="text-gray-700  mb-2"><span className="font-bold">Country:</span> {scholarship.country}</p>
-      <p className="text-gray-700 mb-2">
+      
+      
+      {/* <p className="text-gray-700 mb-2">
         <span className="font-bold">Deadline:</span> {new Date(scholarship.deadline).toDateString()}
-      </p>
+      </p> */}
+
+<p className="text-gray-700 mb-2">
+  <span className="font-bold">Deadline:</span>{" "}
+  {isNaN(Date.parse(scholarship.deadline))
+    ? scholarship.deadline // If it's not a valid date (like "Ongoing")
+    : new Date(scholarship.deadline).toDateString()}
+</p>
+
       <p className="text-gray-700 mb-2"><span className="font-bold">Level:</span> {scholarship.level}</p>
       <p className="text-gray-700 mb-2"><span className="font-bold">Funding:</span> {scholarship.funding?.join(", ")}</p>
 
