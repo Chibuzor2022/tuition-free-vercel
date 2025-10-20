@@ -47,10 +47,7 @@ Our mission is to empower students by providing professional educational advisor
             <li className="flex items-center">
               <span className="text-yellow-600 text-xl mr-2">👉</span> Excellence – We are committed to delivering world-class educational consulting services with professionalism.
             </li>
-            <li className="flex items-center">
-              <span className="text-yellow-600 text-xl mr-2">👉</span> Accessibility – We believe education should be within reach for all, and we work to remove financial and information barriers.
-            </li>
-            <li className="flex items-center">
+                        <li className="flex items-center">
               <span className="text-yellow-600 text-xl mr-2">👉</span> Empowerment – We equip students with the knowledge, opportunities, and confidence to achieve their dreams.
             </li>
             <li className="flex items-center">
