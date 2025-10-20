@@ -10,7 +10,7 @@ export default defineConfig({
   title: 'tuitio-free-Sanity',
 
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
-   dataset: import.meta.env.VITE_SANITY_DATASET,
+  dataset: import.meta.env.VITE_SANITY_DATASET,
 
 
  

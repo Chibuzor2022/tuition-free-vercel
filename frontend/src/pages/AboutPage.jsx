@@ -13,8 +13,7 @@ const AboutPage = () => {
     <p className="text-md md:text-lg mb-8 leading-relaxed">
          
 
-Tuition-free World Limited is an educational consulting company dedicated to connecting students with global opportunities. We specialize in guiding students to access tuition-free and scholarship-based programs across international institutions, making higher education more accessible, affordable, and achievable.
-
+Tuition-free World Limited is an educational agency dedicated to connecting students with global opportunities. We specialize in guiding students to access affordable programs across international institutions, making higher education more accessible, affordable, and achievable.
         </p>
     
 </div>
@@ -24,7 +23,7 @@ Tuition-free World Limited is an educational consulting company dedicated to con
     <p className="text-lg md:text-xl mb-8 leading-relaxed">
          
 
-To be the leading gateway for international students, making world-class education accessible and affordable through transparent guidance and scholarship opportunities.
+To be the leading gateway for international students, making world-class education accessible and affordable through transparent guidance.
 
 
         </p>
@@ -35,7 +34,7 @@ To be the leading gateway for international students, making world-class educati
     <h2 className="text-3xl text-gray-900 text">  Mission</h2>
      <p className="text-md md:text-lg mb-8 leading-relaxed">
          
-Our mission is to empower students by providing professional educational consulting, connecting them to global institutions, and guiding them to access tuition-free and scholarship opportunities that unlock their academic and career potential.
+Our mission is to empower students by providing professional educational advisory services, connecting them to global institutions, and guiding them to access affordable opportunities that unlock their academic and career potentials.
         </p>
     
 </div>

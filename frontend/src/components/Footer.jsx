@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-bold text-yellow-300">Tuition-Free World</h2>
           <p className="mt-3 text-gray-400">
-            Your trusted source for global scholarships. Helping students access tuition-free opportunities worldwide.
+          Your trusted source for accessing global educational opportunities.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-700 text-center py-4">
-        <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Tuition-Free World. All rights reserved.</p>
+        <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Tuition-Free World Limited. All rights reserved.</p>
       </div>
     </footer>
     
